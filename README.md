@@ -1,2 +1,2 @@
-# esm206_lab4_part1_ev
+# Lab 4 repo setup
 This repo contains example code created for practice using the repo first R project setup workflow
