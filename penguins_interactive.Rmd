@@ -3,15 +3,37 @@ title: "Interactive Penguins"
 output: html_document
 ---
 
-```{r setup, include=TRUE, message = FALSE, warning = FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include=TRUE, message = FALSE, warning = FALSE} 
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE) 
 
 library(plotly)
 library(DT)
 library(tidyverse)
 library(palmerpenguins)
 
+```
+
+```{r, echo = FALSE}
+penguins_graph <- ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(aes(color = species)) 
+#### This text above simply stores the penguins_graph. The text below shows it 
+penguins_graph
 
 ```
 
+
+```{r}
+ggplotly(penguins_graph)
+
+```
+
+```{r}
+datatable(penguins)
+
+```
+
+
+```{r}
+
+```
 
